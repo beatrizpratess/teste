@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Van Gogh | Acervo Digital</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="hand" href="#inicio">Acervo digital</a>
+      <nav>
+        <a class="hand" href="#inicio" data-r="inicio">Início</a>
+        <a class="hand" href="#obras" data-r="obras">Obras</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="tela-inicio" class="tela">
+        <h1 class="title">Vicent Van Gogh</h1>
+        <p class="lead">Pinturas, técnicas e histórias do artista que transformou o céu em movimento</p>
+
+        <!-- Bolha flutuante: autorretrato 1 -->
+        <div class="card hero">
+          <h2>Um acervo para <param name="" value=""> você explorar ✦</h2>
+          <div class="blob">
+            <img class="art" src="img/960px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_(454045).jpg" alt="Autorretrato de Van Gogh" onerror="this.remove()">
+          </div>
+        </div>
+
+        <!-- Obras em destaque (as 3 primeiras da lista de obras) -->
+        <div class="sechead"><h2>Em destaque</h2></div>
+        <div class="three">
+        <a class="card work" href="#obra-noite-estrelada">
+          <div class="img ph">
+            <img class="art" src="img/noiteestrelada2.jpg" alt="A Noite Estrelada" onerror="this.remove()">
+          </div>
+          <h3>A Noite Estrelada</h3>
+          <span class="sticker ">1889</span>
+        </a>
+        <a class="card work" href="#obra-girassois">
+          <div class="img ph">
+            <img class="art" src="img/osgirassois.jpg" alt="Os Girassóis" onerror="this.remove()">
+          </div>
+          <h3>Os Girassóis</h3>
+          <span class="sticker b">1888</span>
+        </a>
+        <a class="card work" href="#obra-quarto-em-arles">
+          <div class="img ph">
+            <img class="art" src="img/quarto2.jpg" alt="O Quarto em Arles" onerror="this.remove()">
+          </div>
+          <h3>O Quarto em Arles</h3>
+          <span class="sticker n">1888</span>
+        </a>
+        </div>
+
+        <!-- Conhecer o acervo: autorretrato 2 -->
+        <div class="card about">
+          <div>
+            <h2>Conheça as obras</h2>
+            <p>Cada pintura traz ano, técnica e a instituição que a guarda, em uma leitura simples e direta para estudantes, curiosos e apaixonados por arte</p>
+            <a class="btn" href="#obras">Explorar</a>
+          </div>
+          <div>
+            <div class="img ph">
+              <img class="art" src="img/auto2.jpg" alt="Autorretrato de Van Gogh" onerror="this.remove()">
+            </div>
+            <p class="credit"></p>
+          </div>
+        </div>
+
+        <a class="card cta" href="#obras">
+          <h2>Pronto para entrar no mundo de Van Gogh?</h2>
+          <span class="btn y">Ver todas as obras</span>
+        </a>
+      </section>
+
+      <!-- ============ TELA 2: LISTA DE OBRAS ============ -->
+      <section id="tela-obras" class="tela" hidden>
+        <h1 class="title">Obras</h1>
+        <p class="lead">Escolha uma pintura para ver os detalhes</p>
+
+        <div class="card search">
+          <input id="busca" type="search" placeholder="Buscar por título, museu ou ano" aria-label="Buscar obras">
+          <span class="hand" id="contagem"></span>
+        </div>
+        <div id="lista">
+        <a class="card row" href="#obra-noite-estrelada" data-id="noite-estrelada" data-tecnica="Óleo sobre tela" data-acervo="MoMA, Nova York">
+          <div class="img ph">
+            <img class="art" src="img/noiteestrelada2.jpg" alt="A Noite Estrelada" onerror="this.remove()">
+          </div>
+          <h3>A Noite Estrelada</h3>
+          <span class="sticker">1889</span>
+          <p>Vista da janela do sanatório em Saint-Rémy, com um céu em redemoinho sobre uma vila adormecida</p>
+        </a>
+        <a class="card row" href="#obra-girassois" data-id="girassois" data-tecnica="Óleo sobre tela" data-acervo="National Gallery, Londres">
+          <div class="img ph">
+            <img class="art" src="img/osgirassois.jpg" alt="Os Girassóis" onerror="this.remove()">
+          </div>
+          <h3>Os Girassóis</h3>
+          <span class="sticker">1888</span>
+          <p>Parte da série pintada em Arles para decorar o quarto de Gauguin</p>
+        </a>
+        <a class="card row" href="#obra-quarto-em-arles" data-id="quarto-em-arles" data-tecnica="Óleo sobre tela" data-acervo="Museu Van Gogh, Amsterdã">
+          <div class="img ph">
+            <img class="art" src="img/quarto2.jpg" alt="O Quarto em Arles" onerror="this.remove()">
+          </div>
+          <h3>O Quarto em Arles</h3>
+          <span class="sticker">1888</span>
+          <p>O quarto do artista em tons planos e perspectiva deliberadamente inclinada</p>
+        </a>
+        <a class="card row" href="#obra-comedores-de-batatas" data-id="comedores-de-batatas" data-tecnica="Óleo sobre tela" data-acervo="Museu Van Gogh, Amsterdã">
+          <div class="img ph">
+            <img class="art" src="img/oscomedores.jpg" alt="Os Comedores de Batatas" onerror="this.remove()">
+          </div>
+          <h3>Os Comedores de Batatas</h3>
+          <span class="sticker">1885</span>
+          <p>Retrato sombrio de uma família camponesa, marco da fase holandesa</p>
+        </a>
+        <a class="card row" href="#obra-campo-de-trigo" data-id="campo-de-trigo" data-tecnica="Óleo sobre tela" data-acervo="Museu Van Gogh, Amsterdã">
+          <div class="img ph">
+            <img class="art" src="img/campodetrigo.jpg" alt="Campo de Trigo com Corvos" onerror="this.remove()">
+          </div>
+          <h3>Campo de Trigo com Corvos</h3>
+          <span class="sticker">1890</span>
+          <p>Uma das últimas obras, com céu carregado e pinceladas agitadas</p>
+        </a>
+        <a class="card row" href="#obra-terraco-do-cafe" data-id="terraco-do-cafe" data-tecnica="Óleo sobre tela" data-acervo="Museu Kröller-Müller, Otterlo">
+          <div class="img ph">
+            <img class="art" src="img/terraçodocafe.jpg" alt="Terraço do Café à Noite" onerror="this.remove()">
+          </div>
+          <h3>Terraço do Café à Noite</h3>
+          <span class="sticker">1888</span>
+          <p>Cena noturna em Arles iluminada por um lampião amarelo sob um céu estrelado</p>
+        </a>
+        <a class="card row" href="#obra-autorretrato-orelha-enfaixada" data-id="autorretrato-orelha-enfaixada" data-tecnica="Óleo sobre tela" data-acervo="Courtauld Gallery, Londres">
+          <div class="img ph">
+            <img class="art" src="img/orelhacortada.jpg" alt="Autorretrato com Orelha Enfaixada" onerror="this.remove()">
+          </div>
+          <h3>Autorretrato com Orelha Enfaixada</h3>
+          <span class="sticker">1889</span>
+          <p>Pintado em Arles, com cachimbo e casaco grosso de inverno</p>
+        </a>
+        <a class="card row" href="#obra-lirios" data-id="lirios" data-tecnica="Óleo sobre tela" data-acervo="J. Paul Getty Museum, Los Angeles">
+          <div class="img ph">
+            <img class="art" src="img/oslirios.jpg" alt="Os Lírios" onerror="this.remove()">
+          </div>
+          <h3>Os Lírios</h3>
+          <span class="sticker">1889</span>
+          <p>Pintado no jardim do asilo de Saint-Rémy, com lírios azuis sobre a terra</p>
+        </a>
+        <a class="card row" href="#obra-ronda-dos-prisioneiros" data-id="ronda-dos-prisioneiros" data-tecnica="Óleo sobre tela" data-acervo="Museu Pushkin, Moscou">
+          <div class="img ph">
+            <img class="art" src="img/rodadosprisioneiros.jpg" alt="A Ronda dos Prisioneiros" onerror="this.remove()">
+          </div>
+          <h3>A Ronda dos Prisioneiros</h3>
+          <span class="sticker">1890</span>
+          <p>Inspirada em uma gravura de Gustave Doré, mostra prisioneiros andando em círculo</p>
+        </a>
+        <a class="card row" href="#obra-amendoeira-em-flor" data-id="amendoeira-em-flor" data-tecnica="Óleo sobre tela" data-acervo="Museu Van Gogh, Amsterdã">
+          <div class="img ph">
+            <img class="art" src="img/amendoireira.jpg" alt="Amendoeira em Flor" onerror="this.remove()">
+          </div>
+          <h3>Amendoeira em Flor</h3>
+          <span class="sticker">1890</span>
+          <p>Ramos floridos contra um céu azul, pintados para o nascimento do sobrinho</p>
+        </a>
+        <a class="card row" href="#obra-noite-estrelada-sobre-o-rodano" data-id="noite-estrelada-sobre-o-rodano" data-tecnica="Óleo sobre tela" data-acervo="Museu d’Orsay, Paris">
+          <div class="img ph">
+            <img class="art" src="img/sobreoroidando.jpg" alt="Noite Estrelada sobre o Ródano" onerror="this.remove()">
+          </div>
+          <h3>Noite Estrelada sobre o Ródano</h3>
+          <span class="sticker">1888</span>
+          <p>Vista noturna do rio em Arles, com as luzes a gás refletidas na água</p>
+        </a>
+        <a class="card row" href="#obra-cafe-a-noite" data-id="cafe-a-noite" data-tecnica="Óleo sobre tela" data-acervo="Yale University Art Gallery, New Haven">
+          <div class="img ph">
+            <img class="art" src="img/ocafenoturno.jpg" alt="O Café à Noite" onerror="this.remove()">
+          </div>
+          <h3>O Café à Noite</h3>
+          <span class="sticker">1888</span>
+          <p>Interior de um café de Arles em vermelhos e verdes intensos</p>
+        </a>
+        <a class="card row" href="#obra-igreja-de-auvers" data-id="igreja-de-auvers" data-tecnica="Óleo sobre tela" data-acervo="Museu d’Orsay, Paris">
+          <div class="img ph">
+            <img class="art" src="img/igreja.jpg" alt="A Igreja de Auvers" onerror="this.remove()">
+          </div>
+          <h3>A Igreja de Auvers</h3>
+          <span class="sticker">1890</span>
+          <p>A igreja de Auvers-sur-Oise em formas onduladas sob um céu azul profundo</p>
+        </a>
+        <a class="card row" href="#obra-retrato-dr-gachet" data-id="retrato-dr-gachet" data-tecnica="Óleo sobre tela" data-acervo="Museu d’Orsay, Paris">
+          <div class="img ph">
+            <img class="art" src="img/retratodoamigo.jpg" alt="Retrato do Dr. Gachet" onerror="this.remove()">
+          </div>
+          <h3>Retrato do Dr. Gachet</h3>
+          <span class="sticker">1890</span>
+          <p>O médico que acompanhou o artista em Auvers-sur-Oise, de expressão melancólica</p>
+        </a>
+        <a class="card row" href="#obra-a-sesta" data-id="a-sesta" data-tecnica="Óleo sobre tela" data-acervo="Museu d’Orsay, Paris">
+          <div class="img ph">
+            <img class="art" src="img/asesta.jpeg" alt="A Sesta" onerror="this.remove()">
+          </div>
+          <h3>A Sesta</h3>
+          <span class="sticker">1890</span>
+          <p>Releitura de uma gravura de Millet, com camponeses descansando sob o feno</p>
+        </a>
+        <a class="card row" href="#obra-casa-amarela" data-id="casa-amarela" data-tecnica="Óleo sobre tela" data-acervo="Museu Van Gogh, Amsterdã">
+          <div class="img ph">
+            <img class="art" src="img/acasaamarela.jpg" alt="A Casa Amarela" onerror="this.remove()">
+          </div>
+          <h3>A Casa Amarela</h3>
+          <span class="sticker">1888</span>
+          <p>A casa de Arles onde Van Gogh sonhou criar uma comunidade de artistas</p>
+        </a>
+        <a class="card row" href="#obra-cadeira-de-van-gogh" data-id="cadeira-de-van-gogh" data-tecnica="Óleo sobre tela" data-acervo="National Gallery, Londres">
+          <div class="img ph">
+            <img class="art" src="img/cadeira.jpg" alt="A Cadeira de Van Gogh" onerror="this.remove()">
+          </div>
+          <h3>A Cadeira de Van Gogh</h3>
+          <span class="sticker">1888</span>
+          <p>Uma cadeira de madeira simples sob a luz do dia, par da cadeira de Gauguin</p>
+        </a>
+        <a class="card row" href="#obra-cadeira-de-gauguin" data-id="cadeira-de-gauguin" data-tecnica="Óleo sobre tela" data-acervo="Museu Van Gogh, Amsterdã">
+          <div class="img ph">
+            <img class="art" src="img/cadeira2.jpg" alt="A Cadeira de Gauguin" onerror="this.remove()">
+          </div>
+          <h3>A Cadeira de Gauguin</h3>
+          <span class="sticker">1888</span>
+          <p>Uma poltrona à luz de vela, com livros, pintada como um retrato de Gauguin</p>
+        </a>
+        <a class="card row" href="#obra-campo-de-trigo-com-ciprestes" data-id="campo-de-trigo-com-ciprestes" data-tecnica="Óleo sobre tela" data-acervo="Metropolitan Museum, Nova York">
+          <div class="img ph">
+            <img class="art" src="img/campodetrigocipestre.jpg" alt="Campo de Trigo com Ciprestes" onerror="this.remove()">
+          </div>
+          <h3>Campo de Trigo com Ciprestes</h3>
+          <span class="sticker">1889</span>
+          <p>Campo agitado, ciprestes escuros e nuvens em espiral</p>
+        </a>
+        <a class="card row" href="#obra-estrada-com-cipreste-e-estrela" data-id="estrada-com-cipreste-e-estrela" data-tecnica="Óleo sobre tela" data-acervo="Museu Kröller-Müller, Otterlo">
+          <div class="img ph">
+            <img class="art" src="img/entradacipestre.jpg" alt="Estrada com Cipreste e Estrela" onerror="this.remove()">
+          </div>
+          <h3>Estrada com Cipreste e Estrela</h3>
+          <span class="sticker">1890</span>
+          <p>Uma estrada de campo com um cipreste, uma estrela e uma lua crescente</p>
+        </a>
+        <a class="card row" href="#obra-oliveiras" data-id="oliveiras" data-tecnica="Óleo sobre tela" data-acervo="Minneapolis Institute of Art">
+          <div class="img ph">
+            <img class="art" src="img/oliveiras.jpg" alt="Oliveiras" onerror="this.remove()">
+          </div>
+          <h3>Oliveiras</h3>
+          <span class="sticker">1889</span>
+          <p>Oliveiras sob um céu amarelo, da série pintada em Saint-Rémy</p>
+        </a>
+        <a class="card row" href="#obra-sapatos" data-id="sapatos" data-tecnica="Óleo sobre tela" data-acervo="Museu Van Gogh, Amsterdã">
+          <div class="img ph">
+            <img class="art" src="img/sapatos.jpg" alt="Um Par de Sapatos" onerror="this.remove()">
+          </div>
+          <h3>Um Par de Sapatos</h3>
+          <span class="sticker">1888</span>
+          <p>Sapatos gastos, tema que o artista pintou várias vezes</p>
+        </a>
+        <a class="card row" href="#obra-ceifeiro" data-id="ceifeiro" data-tecnica="Óleo sobre tela" data-acervo="Museu Van Gogh, Amsterdã">
+          <div class="img ph">
+            <img class="art" src="img/ceifeiro.jpg" alt="Campo de Trigo com Ceifeiro" onerror="this.remove()">
+          </div>
+          <h3>Campo de Trigo com Ceifeiro</h3>
+          <span class="sticker">1889</span>
+          <p>Um ceifeiro sob o sol dourado, visto pelo artista como imagem da morte sem tristeza</p>
+        </a>
+        <a class="card row" href="#obra-caveira-com-cigarro" data-id="caveira-com-cigarro" data-tecnica="Óleo sobre tela" data-acervo="Museu Van Gogh, Amsterdã">
+          <div class="img ph">
+            <img class="art" src="img/caveiracomcigarro.jpg" alt="Caveira com Cigarro Aceso" onerror="this.remove()">
+          </div>
+          <h3>Caveira com Cigarro Aceso</h3>
+          <span class="sticker">1886</span>
+          <p>Estudo dos tempos de academia em Antuérpia, com um toque de humor</p>
+        </a>
+        </div>
+        <p class="lead" id="vazio" hidden>Nenhuma obra encontrada</p>
+      </section>
+
+      <!-- ============ TELA 3: PÁGINA DA OBRA ============ -->
+      <!-- Montada pelo script.js a partir do bloco da obra escolhida -->
+      <section id="tela-obra" class="tela" hidden></section>
+
+    </main>
+
+    <footer>
+      <span class="hand">Vincent van Gogh</span>
+      <span class="hand">1853–1890</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
